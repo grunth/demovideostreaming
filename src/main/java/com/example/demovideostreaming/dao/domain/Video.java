@@ -32,6 +32,9 @@ public class Video {
     @Property
     private Integer runningTime;
 
+    @Property
+    private Boolean delisted = false;
+
     @Relationship(value = "HAS_ENGAGEMENT", direction = Relationship.Direction.OUTGOING)
     private Engagement engagement;
 }

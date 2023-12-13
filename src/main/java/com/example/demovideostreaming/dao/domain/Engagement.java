@@ -3,7 +3,7 @@ package com.example.demovideostreaming.dao.domain;
 import lombok.Data;
 import org.springframework.data.neo4j.core.schema.*;
 
-@Node("Engagement")
+@Node
 @Data
 public class Engagement {
 
@@ -12,10 +12,10 @@ public class Engagement {
     private Long videoId;
 
     @Property
-    private Integer impressions;
+    private Integer impressions = 0;
 
     @Property
-    private Integer views;
+    private Integer views = 0;
 
     @Relationship(type = "HAS_VIDEO", direction = Relationship.Direction.INCOMING)
     private Video video;
