@@ -6,7 +6,6 @@ import org.springframework.data.neo4j.core.schema.*;
 @Node
 @Data
 public class Engagement {
-
     @Id
     @GeneratedValue
     private Long videoId;
