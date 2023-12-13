@@ -1,0 +1,42 @@
+type Video {
+    id: ID!
+    title: String!
+    synopsis: String
+    director: String
+    cast: String
+    yearOfRelease: Int
+    genre: String
+    runningTime: Int
+}
+
+type Engagement {
+    videoId: ID!
+    impressions: Int
+    views: Int
+}
+
+type Query {
+    video(id: ID!): Video
+    allVideos: [Video]
+    searchVideos(director: String): [Video]
+    engagement(videoId: ID!): Engagement
+    allEngagements: [Engagement]
+}
+
+type Mutation {
+    publishVideo(video: VideoInput!): Video
+    editVideoMetadata(id: ID!, video: VideoInput!): Video
+    delistVideo(id: ID!): Boolean
+    recordImpression(videoId: ID!): Boolean
+    recordView(videoId: ID!): Boolean
+}
+
+input VideoInput {
+    title: String!
+    synopsis: String
+    director: String
+    cast: String
+    yearOfRelease: Int
+    genre: String
+    runningTime: Int
+}
