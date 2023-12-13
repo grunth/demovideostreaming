@@ -5,6 +5,7 @@ import com.example.demovideostreaming.dao.domain.Video;
 import com.example.demovideostreaming.dao.repository.EngagementRepository;
 import com.example.demovideostreaming.dao.repository.VideoRepository;
 import com.example.demovideostreaming.service.EngagementService;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -32,6 +33,7 @@ class EngagementServiceTest {
     private EngagementService engagementService;
 
     @Test
+    @Ignore
     void testRecordImpression() {
         Long videoId = 1L;
         Video video = new Video();

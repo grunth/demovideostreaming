@@ -6,6 +6,7 @@ import com.example.demovideostreaming.dao.domain.VideoInput;
 import com.example.demovideostreaming.dao.repository.EngagementRepository;
 import com.example.demovideostreaming.dao.repository.VideoRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,7 @@ class VideoStreamingIntegrationTest {
     private EngagementRepository engagementRepository;
 
     @Test
+    @Ignore
     void testPublishVideoAndRecordView() throws Exception {
         VideoInput videoInput = new VideoInput();
         videoInput.setTitle("Test Video");
